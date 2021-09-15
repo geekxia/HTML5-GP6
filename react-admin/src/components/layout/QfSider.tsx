@@ -23,7 +23,7 @@ export default props => {
 
   const history = useHistory()
   const skip = ()=> history.replace('/')
-  const u = useAppSelector(({test})=>test.user)
+  const u = useAppSelector(({user})=>user.user)
 
   const renderMenu = (arr, flag) => {
     return arr.map(ele=>(
@@ -45,7 +45,7 @@ export default props => {
     <div className='qf-sider'>
 
       <div className={`logo ${props.value?"off":""}`}>
-        <img src={img.logo} onClick={skip} />
+        <img src={img.logo} onClick={skip} alt='qf' />
       </div>
 
       <Menu

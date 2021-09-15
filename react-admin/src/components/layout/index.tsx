@@ -7,7 +7,7 @@ import QfSider from './QfSider'
 import QfHeader from './QfHeader'
 import './style.scss'
 
-const { Header, Sider, Content, Footer } = Layout
+const { Header, Sider, Content } = Layout
 
 export default props => {
   const [collapsed, setCollapsed] = useState(false)

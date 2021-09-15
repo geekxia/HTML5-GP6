@@ -16,5 +16,12 @@ app.use(require('koa-body')({multipart: true}))
 app.use(require('./routes/webapp').routes())
 // vue element restful api
 app.use(require('./routes/element').routes())
+// react antd restful api
+app.use(require('./routes/antd').routes())
+// 小程序接口
+app.use(require('./routes/weapp').routes())
 
 app.listen(9999, ()=>console.log('server is running on 9999'))
+
+
+

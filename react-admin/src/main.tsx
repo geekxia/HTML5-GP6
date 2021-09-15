@@ -1,9 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-// CDN
 // import 'antd/dist/antd.css'
-
 import '@/assets/init.css'
 import '@/assets/style.scss'
 import App from './App'

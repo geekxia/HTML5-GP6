@@ -5,10 +5,9 @@ import HomeAdmin from './HomeAdmin'
 import HomeEditor from './HomeEditor'
 
 export default () => {
-  const u = useAppSelector(({test})=>test.user)
-
+  const u:any = useAppSelector(({user})=>user.user)
   const dash = useMemo(()=>{
-    let result = null
+    let result: any = null
     switch (u.roleName) {
       case 'admin':
         result = <HomeAdmin/>

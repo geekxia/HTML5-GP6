@@ -1,20 +1,25 @@
 import React from 'react'
 import { useAppDispatch } from '@/hooks'
+import { useHistory } from 'react-router-dom'
 
 import {
   Form, Input, Button, Checkbox
 } from 'antd'
 
-import { login } from '@/store/actions'
+import { login } from '@/store/reducers/user'
 
 import './style.scss'
 
 export default () => {
   const dispatch = useAppDispatch()
+  const history = useHistory()
   // 表单提交
   const onFinish = (values) => {
     // login先获取token，接着获取用户信息
-    dispatch(login(values))
+    dispatch(login(values)).then((action)=>{
+      console.log('login action', action)
+      if(action.payload) history.push('/')
+    })
   }
 
   return (

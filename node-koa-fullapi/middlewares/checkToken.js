@@ -2,6 +2,7 @@ const jwt = require('jsonwebtoken')
 
 module.exports = async (ctx, next) => {
   const token = ctx.headers.authorization
+  // console.log('token---', token)
   if (token) {
     try {
       var decoded = jwt.verify(token, 'qf')

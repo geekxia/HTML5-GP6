@@ -7,7 +7,7 @@ import routes, { constRoutes } from '@/views/index.tsx'
 export default () => {
 
   // 来自于redux中的用户信息（登录成功，用token换回来的）
-  const u = useAppSelector(({test})=>test.user)
+  const u = useAppSelector(({user})=>user.user)
   // 动态生成路由规则
   const renderRoute = useCallback(
     (arr, flag) => {
@@ -27,7 +27,7 @@ export default () => {
       })
       return result
     },
-    []
+    [u]
   )
 
   return (
